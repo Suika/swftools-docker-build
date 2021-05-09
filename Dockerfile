@@ -1,4 +1,4 @@
-FROM ghcr.io/suika/opencv-video-minimal:4.2-py3.7.5 as swfbuild
+FROM suika/opencv-video-minimal:4.2-py3.7.5 as swfbuild
 RUN apk add --update --no-cache --virtual build-dep build-base git libjpeg-turbo-dev freetype-dev zlib-dev && \
     wget http://swftools.org/swftools-2013-04-09-1007.tar.gz && \
     tar xzf swftools-2013-04-09-1007.tar.gz && rm swftools-2013-04-09-1007.tar.gz && cd swftools* && \
